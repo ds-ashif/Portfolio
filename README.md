@@ -1,4 +1,4 @@
-# Mohd Arshil Azim - Portfolio Website
+# Ashif Ahamad - Portfolio 
 
 A modern, responsive portfolio website built with React and CSS to showcase my projects, skills, and achievements.
 
@@ -114,6 +114,4 @@ Deploy the contents of the `build` folder to your hosting provider.
 - CSS
 - React Icons
 
-## License
 
-This project is licensed under the MIT License.
