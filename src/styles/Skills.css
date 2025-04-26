@@ -1,0 +1,47 @@
+.skills {
+  background: linear-gradient(135deg, #0c0c2c 0%, #141b29 100%);
+  padding: var(--spacing-xl) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.skills::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #ebeeef, #dfe2e2); /* Keeping the accent */
+}
+.skill-category p,
+.skill-category span,
+.skill-category label {
+  color: #eaeaea; /* Light text for better contrast on dark background */
+}
+.skill-category {
+  margin-bottom: 50px; /* Adds space between categories */
+  padding: 20px;
+  background-color: #1c1f3f; /* Keeps dark card style */
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.skill-category h3 {
+  color: #ffffff; /* White headers */
+  margin-bottom: 20px;
+}
+
+.hexagon-skills-container {
+  background-color: #1c1f3f;
+  box-shadow: var(--shadow-md);
+}
+
+.hexagon-skills-container::before {
+  background: linear-gradient(135deg, rgba(79, 179, 191, 0.05) 0%, rgba(166, 225, 224, 0.05) 100%);
+}
+.skill-category .skill-bar {
+  background-color: #0c0c2c; /* Background bar */
+}
+.skill-category .skill-bar-fill {
+  background-color: #feffff; /* Fill color - vibrant blue */
+}

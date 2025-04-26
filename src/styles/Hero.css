@@ -1,0 +1,252 @@
+.hero {
+  background: linear-gradient(135deg, #0c0c2c 0%, #141b29 100%);
+  color: #fff;
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(31, 128, 224, 0.08) 0%, rgba(12, 12, 44, 0) 70%);
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+  z-index: 1;
+  gap: 40px;
+}
+
+.hero-image-container {
+  flex-shrink: 0;
+}
+
+.hero-image-wrapper {
+  width: 320px;
+  height: 320px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 5px solid rgba(31, 128, 224, 0.5);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.hero-image-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, rgba(31, 128, 224, 0.2), transparent);
+  z-index: 1;
+}
+
+.hero-image-wrapper:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  border-color: rgba(31, 128, 224, 0.8);
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.7s ease;
+}
+
+.hero-image-wrapper:hover .hero-image {
+  transform: scale(1.05);
+}
+
+.hero-content {
+  max-width: 600px;
+  text-align: left;
+  z-index: 1;
+}
+
+.hero-name {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #00bfff, #1f80e0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-title {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  color: #aaa;
+}
+
+.hero-cta {
+  display: flex;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-icon {
+  margin-right: 8px;
+  font-size: 1rem;
+}
+
+.cta-btn.primary {
+  background-color: #1f80e0;
+  color: #fff;
+  border: 2px solid #1f80e0;
+}
+
+.cta-btn.secondary {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.cta-btn.tertiary {
+  background-color: #1f1f3a;
+  color: #fff;
+  border: 2px solid #1f1f3a;
+}
+
+.cta-btn.primary:hover {
+  background-color: transparent;
+  color: #1f80e0;
+}
+
+.cta-btn.secondary:hover {
+  background-color: #fff;
+  color: #0c0c2c;
+}
+
+.cta-btn.tertiary:hover {
+  background-color: #2a2a4a;
+  border-color: #2a2a4a;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.hero-social {
+  display: flex;
+}
+
+.hero-social .social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 45px;
+  background-color: #1f1f3a;
+  border-radius: 50%;
+  margin-right: 15px;
+  color: #fff;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.hero-social .social-icon:hover {
+  background-color: #00bfff;
+  transform: translateY(-5px);
+}
+
+@media screen and (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-cta {
+    justify-content: center;
+  }
+
+  .hero-social {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-name {
+    font-size: 3rem;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .cta-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .hero-image-wrapper {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-name {
+    font-size: 2.5rem;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-btn {
+    margin: 0;
+    width: 200px;
+  }
+
+  .hero-image-wrapper {
+    width: 200px;
+    height: 200px;
+  }
+}
