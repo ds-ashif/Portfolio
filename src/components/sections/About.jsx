@@ -17,7 +17,7 @@ const About = () => {
             <div className="about-image-container">
               <FloatingAnimation amplitude={10} duration={4}>
                 <div className="about-image-wrapper">
-                  <img src="/avatar1.avif" alt="Mohd Arshil Azim" className="about-image" />
+                  <img src="/avatar1.avif" alt="Ashif" className="about-image" />
                 </div>
               </FloatingAnimation>
             </div>
