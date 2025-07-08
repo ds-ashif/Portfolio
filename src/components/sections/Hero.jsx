@@ -48,7 +48,7 @@ const Hero = () => {
               <Link to="/projects" className="cta-btn secondary">
                 View Projects
               </Link>
-              <a href="/ASHIF_AHAMAD_latest.pdf" className="cta-btn tertiary" target="_blank" rel="noopener noreferrer">
+              <a href="/Ashif_Resume.pdf" className="cta-btn tertiary" target="_blank" rel="noopener noreferrer">
                 <FaFileAlt className="btn-icon" /> Resume
               </a>
             </div>
